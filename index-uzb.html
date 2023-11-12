@@ -10,40 +10,55 @@
 
 <body>
     <header id="dark">
-        <nav class="container">gitg
+        <nav class="container">
             <div class="nav-bar">
                 <img src="images/IMAGE.svg" alt="iconimg">
                 <ul class="nav-list">
-                    <li class="nav-item nav-1"><a class="nav-link" href="#">Bosh sahifa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Haqida</a></li>
+                    <li class="nav-item nav-1"><a class="nav-link" href="#">Bosh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">haqida</a></li>
                     <li class="nav-item"><a href="#">jamoa</a></li>
-                    <li class="nav-item"><a href="#">Do'kon</a></li>
-                    <li class="nav-item"><a href="#">sahifalar</a></li>
+                    <li class="nav-item"><a href="#">market</a></li>
+                    <li class="nav-item"><a href="#">sahifa</a></li>
                 </ul>
                 <div class="nav-right">
                     <button id="mode-btn">
                         <img src="images/light.svg" alt="icon" />
                     </button>
-                    <button class="nav-btn">kontaktdan foydalanish</button>
-                    <button class="nav-right-btn"><a class="nav-right-link" href="index.html">en</a></button>
+                    <button class="nav-btn">biz bilan bog'lanish</button>
+                    <button class="nav-right-btn"><a class="nav-right-link" href="index.html">eng</a></button>
                 </div>
+                <a class="menu-link" href="#"><img src="images/menu.svg" alt="menu"></a>
             </div>
-
         </nav>
     </header>
+    <ul id="navbar-responsive">
+        <button id="navbar-close">
+            <img src="images/close.svg" alt="close">
+        </button>
+        <li class="navbar-item"><a class="navbar-link" href="#">bosh sahifa</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#our">haqida</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#team">jamoa</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#shop">savdo</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#game">Sahifalar</a></li>
+        <button id="nav-btn">
+            <img src="images/light.svg" alt="icon" />
+        </button>
+        <button class="nav-btn"><a href="#" class="navbtn-link">Contact Us</a></button>
+        <button class="nav-btn"><a class="navbtn-link" href="index-uzb.html">uz</a></button>
+    </ul>
     <main>
         <section id="home">
             <div class="container home-boxs">
                 <div class="home-left-box">
                     <div class="home-left-box-1">
-                        <p>ESPORTNING KELAJASI</p>
+                        <span class="home-left-text">esportning kelajagi</span>
                     </div>
-                    <h1>O'yinning keyingi avlodini oching</h1>
+                    <img src="images/Frame.svg" alt="frames">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim
                         non pulvinar neque.</p>
                     <div class="home-left-box-2">
-                        <button class="home-left-box-btn-1">Ko'proq o'ganing</button>
-                        <button class="home-left-box-btn-2">qarang bizni jamoa</button>
+                        <button class="home-left-box-btn-1">ko'proq o'rganing</button>
+                        <button class="home-left-box-btn-2">bizning jamoa qarang</button>
                     </div>
                 </div>
                 <div class="home-right-box">
@@ -51,13 +66,33 @@
                 </div>
             </div>
         </section>
+        <section id="our">
+            <div class="container">
+                <div class="our-boxs">
+                    <div class="our-box-1">
+                        <h2 class="our-title">bizning homiylar</h2>
+                        <img src="images/ourline.svg" alt="" class="our-title-img">
+                        <p class="our-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in
+                            morbi pulvinar. Enim non pulvinar neque.</p>
+                    </div>
+                    <div class="our-box-2">
+                        <img src="images/our1.svg" alt="our" class="our-box-img">
+                        <img src="images/our2.svg" alt="our" class="our-box-img">
+                        <img src="images/our3.svg" alt="our" class="our-box-img">
+                        <img src="images/our4.svg" alt="our" class="our-box-img">
+                        <img src="images/our5.svg" alt="our" class="our-box-img">
+                        <img src="images/our6.svg" alt="our" class="our-box-img">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="team">
             <div class="container">
                 <div class="team-heading">
                     <div class="team-center-box">
-                        <p>O'yinning keyingi avlodini oching</p>
+                        <p class="team-text">sportning kelajagi</p>
                     </div>
-                    <h2>Oʻyin oʻynash uchun yagona oyna kerak!</h2>
+                    <h2>Your one stop shop gaming needs!</h2>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam</p>
                 </div>
@@ -65,7 +100,7 @@
                     <div class="team-card">
                         <img src="images/team1.svg" alt="team">
                         <div class="team-card-1">
-                            <h5>Yangi o'yin</h5>
+                            <h5>Barcha yangi o'yin</h5>
                             <p>Vivamus magna justo, lacinia eget coecetur sed, convallis at tellus. Curabitur non nulla
                                 sit Vestibum
                                 ante ipsum primis in faucibus orci</p>
@@ -105,8 +140,8 @@
             <div class="container">
                 <div class="shop-boxs">
                     <div class="shop-box-1">
-                        <p class="shop-text-1">FUTURE OF ESPORTS</p>
-                        <h3>Eng so'nggi o'yin mexanizmi Eng so'nggi o'yin mexanizmi</h3>
+                        <p class="shop-text-1">ESPORTNING KELAJASI</p>
+                        <h3>Bulutli o'yinlarning yangi davri</h3>
                         <p class="shop-text-2">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                             laudantium, totam rem aperiam,
@@ -114,7 +149,7 @@
                             explicabo. Nemo enim ipsam
                             voluptatem quia
                         </p>
-                        <button>Explore More</button>
+                        <button class="home-left-box-btn-1">Koʻproq oʻrganing</button>
                     </div>
                     <div class="shop-box-2">
                         <img src="images/media.svg" alt="">
@@ -122,36 +157,53 @@
                 </div>
             </div>
         </section>
-        <section class="game">
+        <section id="gameover">
+            <div class="gameover-cards">
+                <img src="images/gameover1.svg" alt="">
+                <img src="images/gameover2.svg" alt="">
+                <img src="images/gameover3.svg" alt="">
+            </div>
+        </section>
+        <section id="game">
             <div class="container">
-                <div class="game-boxs">
-                    <div class="game-box-1">
-                        <p class="game-text">FUTURE OF ESPORTS</p>
-                        <h3>Latest News & Articles</h3>
-                        <img src="images/game1.svg" alt="notebook">
-                        <p class="game-text-1">April 2, 2021</p>
-                        <p class="game-text-3">Esports Group teams up with the Indianapolis Colts</p>
+                <div class="game-cards">
+                    <div class="game-card-1">
+                        <div class="game-imgtext">
+                            <img src="images/fire.svg" alt="fire">
+                            <p class="text-game">esportning kelajagi</p>
+                        </div>
+                        <h4 class="game-title">Eng so'nggi yangiliklar va maqolalar</h4>
                     </div>
-                    <div class="game-cards">
-                        <div class="game-card">
-                            <img src="images/game2.svg" alt="">
-                            <p class="game-card-text">April 2, 2021</p>
-                            <p class="game-card-text-1">NAVI reveals s1mple fifth anniversary</p>
+                    <div class="game-card-2">
+                        <button class="game-btn"><a href="#">koproq o'qing</a></button>
+                    </div>
+                </div>
+                <div class="game-boxs">
+                    <div class="left-box">
+                        <img class="game-left-box-img" src="images/game1.svg" alt="game">
+                        <span class="game-left-box-span">April 2, 2021</span>
+                        <p class="game-left-box-text">Esports Group Indianapolis Colts bilan hamkorlik qilad</p>
+                    </div>
+                    <div class="game-right-box">
+                        <div class="game-right-box-card">
+                            <img src="images/game2.svg" alt="network" class="right-card-img">
+                            <span class="right-card-span">April 2, 2021</span>
+                            <p class="right-card-text">NAVI s1mple beshinchi yilligini ochib beradi</p>
                         </div>
-                        <div class="game-card">
-                            <img src="images/game3.svg" alt="">
-                            <p class="game-card-text">April 2, 2021</p>
-                            <p class="game-card-text-1">A1esports Shares new picture</p>
+                        <div class="game-right-box-card">
+                            <img src="images/game3.svg" alt="network" class="right-card-img">
+                            <span class="right-card-span">April 2, 2021</span>
+                            <p class="right-card-text">A1esports yangi rasmni ulashadi</p>
                         </div>
-                        <div class="game-card">
-                            <img src="images/game4.svg" alt="">
-                            <p class="game-card-text">April 2, 2021</p>
-                            <p class="game-card-text-1">T1 unveil partnership with Razer</p>
+                        <div class="game-right-box-card">
+                            <img src="images/game4.svg" alt="network" class="right-card-img">
+                            <span class="right-card-span">April 2, 2021</span>
+                            <p class="right-card-text">T1 Razer bilan hamkorlikni ochib beradi</p>
                         </div>
-                        <div class="game-card">
-                            <img src="images/job.svg" alt="">
-                            <p class="game-card-text">April 2, 2021</p>
-                            <p class="game-card-text-1">RX secures content partnership with</p>
+                        <div class="game-right-box-card">
+                            <img src="images/job.svg" alt="network" class="right-card-img">
+                            <span class="right-card-span">April 2, 2021</span>
+                            <p class="right-card-text">RX secures content partnership with</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +211,24 @@
         </section>
     </main>
     <footer>
-
+        <div class="footer boxs">
+            <div class="footer-box">
+                <h2 class="footer-heading">Eng katta o'yin hamjamiyatiga qo'shiling</h2>
+                <img class="footer-img" src="images/footerline.svg" alt="line">
+                <div class="text">
+                    <p class="footer-text-1">Eng katta o'yin hamjamiyatiga qo'shiling</p>
+                    <p class="footer-text-2">lectus. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut
+                        libero malesu ada
+                        feugiat. Nulla quis lorem
+                        ut
+                        libero malesuada feugiat. Vivamus magna justo</p>
+                </div>
+            </div>
+            <form>
+                <input type="email" name="email" placeholder=" Your Email Address" required>
+                <button>Hozir obuna bo'ling</button>
+            </form>
+        </div>
     </footer>
     <script src="js/dark-light.js"></script>
 </body>

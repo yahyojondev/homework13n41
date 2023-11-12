@@ -7,16 +7,21 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header id="dark">
+       <div id="backtop">
+        <a href="#">
+            <img src="images/backtop.svg" alt="backtop">
+        </a>
+       </div>
+        <header id="navbar">
             <nav class="container">
                 <div class="nav-bar">
                     <img src="images/IMAGE.svg" alt="iconimg">
                     <ul class="nav-list">
                         <li class="nav-item nav-1"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a href="#">Team</a></li>
-                        <li class="nav-item"><a href="#">Shop</a></li>
-                        <li class="nav-item"><a href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="our">About</a></li>
+                        <li class="nav-item"><a href="team">Team</a></li>
+                        <li class="nav-item"><a href="shop">Shop</a></li>
+                        <li class="nav-item"><a href="game">Pages</a></li>
                     </ul>
                         <div class="nav-right">
                             <button id="mode-btn">
@@ -25,18 +30,33 @@
                             <button class="nav-btn">Contact Us</button>
                             <button class="nav-right-btn"><a class="nav-right-link" href="index-uzb.html">uz</a></button>
                         </div>
+                        <a id="navbar-open" class="menu-link" href="#"><img src="images/menu.svg" alt="menu"></a>
                 </div>
-
             </nav>
         </header>
+        <ul id="navbar-responsive">
+            <button id="navbar-close">
+                <img src="images/close.svg" alt="close">
+            </button>
+            <li class="navbar-item"><a class="navbar-link" href="#">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="#our">About</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="#team">Team</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="#shop">Shop</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="#game">Pages</a></li>
+            <button id="nav-btn">
+                <img src="images/light.svg" alt="icon" />
+            </button>
+            <button class="nav-btn"><a href="#" class="navbtn-link">Contact Us</a></button>
+            <button class="nav-btn"><a class="navbtn-link" href="index-uzb.html">uz</a></button>
+        </ul>
         <main>
             <section id="home">
                 <div class="container home-boxs">
                     <div class="home-left-box">
                         <div class="home-left-box-1">
-                            <p>FUTURE OF ESPORTS</p>
+                            <span class="home-left-text">FUTURE OF eSPORTS</span>
                         </div>
-                        <h1>Unleash the Next Generation of Gaming</h1>
+                        <img src="images/Frame.svg" alt="frames">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
                         <div class="home-left-box-2">
                             <button class="home-left-box-btn-1">Explore More</button>
@@ -48,11 +68,30 @@
                     </div>
                 </div>
             </section>
+            <section id="our">
+                <div class="container">
+                    <div class="our-boxs">
+                        <div class="our-box-1">
+                                <h2 class="our-title">Our Sponsors</h2>
+                                <img src="images/ourline.svg" alt="" class="our-title-img">
+                                <p class="our-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
+                        </div>
+                        <div class="our-box-2">
+                                 <img src="images/our1.svg" alt="" class="our-box-img">
+                                 <img src="images/our2.svg" alt="" class="our-box-img">
+                                 <img src="images/our3.svg" alt="" class="our-box-img">
+                                 <img src="images/our4.svg" alt="" class="our-box-img">
+                                 <img src="images/our5.svg" alt="" class="our-box-img">
+                                 <img src="images/our6.svg" alt="" class="our-box-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="team">
                  <div class="container">
                     <div class="team-heading">
                         <div class="team-center-box">
-                            <p>FUTURE OF ESPORTS</p>
+                            <p class="team-text">FUTURE OF ESPORTS</p>
                         </div>
                         <h2>Your one stop shop gaming needs!</h2>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
@@ -104,7 +143,7 @@
                                 eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
                                 voluptatem quia
                             </p>
-                            <button>Explore More</button>
+                            <button class="home-left-box-btn-1">Explore More</button>
                         </div>
                         <div class="shop-box-2">
                             <img src="images/media.svg" alt="">
@@ -112,45 +151,79 @@
                     </div>
                 </div>
             </section>
-            <section class="game">
-                <div class="container">
-                    <div class="game-boxs">
-                        <div class="game-box-1">
-                            <p class="game-text">FUTURE OF ESPORTS</p>
-                            <h3>Latest News & Articles</h3>
-                            <img src="images/game1.svg" alt="notebook">
-                            <p class="game-text-1">April 2, 2021</p>
-                            <p class="game-text-3">Esports Group teams up with the Indianapolis Colts</p>
+            <section id="gameover">
+                      <div class="gameover-cards">
+                        <img src="images/gameover1.svg" alt="">
+                        <img src="images/gameover2.svg" alt="">
+                        <img src="images/gameover3.svg" alt="">
+                      </div>
+            </section>
+           <section id="game">
+               <div class="container">
+                   <div class="game-cards">
+                        <div class="game-card-1">
+                            <div class="game-imgtext">
+                                <img src="images/fire.svg" alt="fire">
+                                <p class="text-game">FUTURE OF eSPORTS</p>                            
+                            </div>
+                            <h4 class="game-title">Latest News & Articles</h4>
                         </div>
-                        <div class="game-cards">
-                              <div class="game-card">
-                                <img src="images/game2.svg" alt="">
-                                <p class="game-card-text">April 2, 2021</p>
-                                <p class="game-card-text-1">NAVI reveals s1mple fifth anniversary</p>
-                              </div>
-                              <div class="game-card">
-                                <img src="images/game3.svg" alt="">
-                                <p class="game-card-text">April 2, 2021</p>
-                                <p class="game-card-text-1">A1esports Shares new picture</p>
-                              </div>
-                              <div class="game-card">
-                                <img src="images/game4.svg" alt="">
-                                <p class="game-card-text">April 2, 2021</p>
-                                <p class="game-card-text-1">T1 unveil partnership with Razer</p>
-                              </div>
-                              <div class="game-card">
-                                <img src="images/job.svg" alt="">
-                                <p class="game-card-text">April 2, 2021</p>
-                                <p class="game-card-text-1">RX secures content partnership with</p>
-                              </div>
+                        <div class="game-card-2">
+                            <button class="game-btn"><a href="#">Read More</a></button>
                         </div>
                     </div>
-                </div>
-            </section>
+                    <div class="game-boxs">
+                        <div class="left-box">
+                            <img class="game-left-box-img" src="images/game1.svg" alt="game">
+                            <span class="game-left-box-span">April 2, 2021</span>
+                            <p class="game-left-box-text">Esports Group teams up with the Indianapolis Colts</p>
+                        </div>
+                        <div class="game-right-box">
+                             <div class="game-right-box-card">
+                                <img src="images/game2.svg" alt="network" class="right-card-img">
+                                <span class="right-card-span">April 2, 2021</span>
+                                <p class="right-card-text">NAVI reveals s1mple fifth anniversary</p>
+                             </div>
+                             <div class="game-right-box-card">
+                                <img src="images/game3.svg" alt="network" class="right-card-img">
+                                <span class="right-card-span">April 2, 2021</span>
+                                <p class="right-card-text">A1esports Shares new picture</p>
+                             </div>
+                             <div class="game-right-box-card">
+                                <img src="images/game4.svg" alt="network" class="right-card-img">
+                                <span class="right-card-span">April 2, 2021</span>
+                                <p class="right-card-text">T1 unveil partnership with Razer</p>
+                             </div>
+                             <div class="game-right-box-card">
+                                <img src="images/job.svg" alt="network" class="right-card-img">
+                                <span class="right-card-span">April 2, 2021</span>
+                                <p class="right-card-text">RX secures content partnership with</p>
+                             </div>
+                        </div>
+                    </div>
+                   </div>
+           </section>
         </main>
-        <footer>
-
-        </footer>
-        <script src="js/dark-light.js"></script>
+            <footer>
+                <div class="footer boxs">
+                    <div class="footer-box">
+                        <h2 class="footer-heading">Join the largest gaming community</h2>
+                        <img class="footer-img" src="images/footerline.svg" alt="line">
+                       <div class="text">
+                        <p class="footer-text-1">Join the largest gaming community</p>
+                        <p class="footer-text-2">lectus. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesu ada
+                            feugiat. Nulla quis lorem
+                            ut
+                            libero malesuada feugiat. Vivamus magna justo</p>
+                       </div>
+                    </div>
+                    <form>
+                        <input type="email" name="email" placeholder=" Your Email Address" required>
+                        <button>Subscribe Now</button>
+                    </form>
+                </div>
+            </footer>
+        <script src="js/main.js"></script>
+        <script src="js/light-dark.js"></script>
     </body>
 </html>

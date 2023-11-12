@@ -1,8 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Orbitron:wght@700&family=PT+Sans&family=Playfair+Display:wght@700&family=Roboto:wght@300;400&family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary-color:#57B8FF;
+    --second-color:#FAC422;
+
+}
+#backtop{
+    position: fixed;
+    z-index: 1;
+    border-radius:5px;
+    background-color:#FAC422;
+    box-shadow: 1px 1px 20px gray;
+    right: 50px;
+    bottom: -50px;
+    transition: 0.5s;
+}
+#backtop:active{
+    background-color:#57B8FF ;
+}
+#backtop a{
+    padding: 10px;
+    display: block;
+}
+#backtop.backtop-show{
+    bottom: 50px;
 }
 .container{
     max-width: 1360px;
@@ -12,11 +40,61 @@
 }
 header{
     position: fixed;
+    z-index: 1;
     padding: 10px 0px 10px;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px)
 }
-#dark{
-  background-image: linear-gradient(to right,#000000E0 0% 50%,#57B8FF 50% 100%);
+.navbar-shrink nav{
+    height: 70px;
+}
+nav {
+    height: 80px;
+    transition: 0.5s;
+}
+#navbar-responsive{
+    z-index: 1;
+    position: fixed;
+    list-style: none;
+    font-size: 20px;
+    top: 0px;
+    left: 100%;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #57B8FF;
+}
+#nav-btn{
+    margin:10px 0px 10px;
+    border: none;
+    background-color:transparent;
+}
+.nav-btn{
+    margin-bottom: 15px;
+}
+
+.navbar-link{
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+}
+.navbtn-link{
+    display: inline-block;
+    color: white;
+}
+#navbar-close{
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    background-color: transparent;
+}
+#navbar-close img{
+    width: 30px;
 }
 #home{
     background-image: linear-gradient(to right, #000000E0 0% 50%, #57B8FF 50% 100%);
@@ -36,6 +114,9 @@ header{
     align-items: center;
     gap: 60px;
     list-style: none;
+}
+.menu-link{
+    display: none;
 }
 section * {
     color: white;
@@ -76,7 +157,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: green;
+    color: #FAC422;
 }
 button:hover{
     background-color: orange;
@@ -95,11 +176,11 @@ button:hover{
     
 }
 .nav-btn{
-    max-width: 185px;
+    padding: 0px 10px ;
     height: 62px;
     flex-shrink: 0;
     border: 1px solid #FFF;
-    width: 116px;
+    max-width: 150px;
     color: #FFF;
     background-color: transparent;
     font-family: Orbitron;
@@ -109,6 +190,7 @@ button:hover{
     line-height: 30px;
 }
 .nav-right-btn{
+    margin-top: 10px;
     border: none;
     font-size: 32px;
     padding: 10px;
@@ -116,9 +198,16 @@ button:hover{
     height: 48px;
     background: transparent;
 }
+.nav-right-btn:hover{
+    display: flex;
+    background-color: transparent;
+}
 .nav-right-link{
     color: white;
     padding-right: 10px;
+}
+.nav-right-link:hover{
+    color: white;
 }
 #home{
     padding-top: 200px;
@@ -127,13 +216,23 @@ button:hover{
     display: flex;
     justify-content: space-between;
 }
+h1{
+    max-width: 656px;
+    color: #FFF;
+    font-family: Orbitron;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86px;
+    text-transform: capitalize;
+}
 .home-left-box-1{
     display: flex;
     margin-bottom: 20px;
     align-items: center;
     gap: 10px;
 }
-.home-left-box-1 p{
+.home-left-text{
     width: 203px;
     color: #57B8FF;
     font-family: Orbitron;
@@ -145,7 +244,7 @@ button:hover{
 }
 h1{
     margin-bottom: 40px;
-    width: 500px;
+    max-width: 500px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 72px;
@@ -174,11 +273,11 @@ button{
     cursor: pointer;
 }
 .home-left-box-btn-1{
-    width: 203px;
+    max-width: 203px;
     height: 50px;
     flex-shrink: 0;
     background: #57B8FF;
-    width: 135px;
+    width: 220px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 18px;
@@ -188,13 +287,14 @@ button{
     text-transform: capitalize;
 }
 .home-left-box-btn-2{
+    padding: 0px 10px;
     margin-bottom: 200px;
     border: none;
-    width: 203px;
+    max-width: 203px;
     height: 50px;
     flex-shrink: 0;
     background: transparent;
-    width: 135px;
+    width: 200px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 18px;
@@ -202,6 +302,61 @@ button{
     font-weight: 400;
     line-height: 28px;
     text-transform: capitalize;
+}
+#our{
+    background: #FDD04A;
+   
+}
+.our-boxs{
+    position: relative;
+    padding: 130px 0px 130px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.our-box-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our-title{
+    margin-bottom: 40px;
+    color: #222730;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px;
+    text-transform: capitalize;
+}
+.our-title-img{
+    position: absolute;
+    top: 190px;
+    left: 600px;
+    max-width: 300px;
+    height: 8px;
+    flex-shrink: 0;
+    stroke-width: 4px;
+    stroke: #57B8FF;
+}
+.our-text{
+    margin-bottom: 40px;
+    width: 600px;
+    color: #555;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+.our-box-2{
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 #team{
     padding-top: 130px;
@@ -222,7 +377,7 @@ button{
     align-items: center;
     gap: 10px;
 }
-.team-center-box p{
+.team-text{
     width: 203px;
     color: #57B8FF;
     text-align: center;
@@ -308,7 +463,7 @@ h5{
     display: flex;
 }
 #shop{
-    padding-top: 120px;
+    padding : 120px 0px 120px;
     background-color: #141820;
 }
 .shop-boxs{
@@ -357,22 +512,45 @@ h3{
     flex-shrink: 0;
     background: #57B8FF;
 }
-.game{
-    padding-top: 100px;
-    background-color: #141820;
+#gameover{
+    background: #141820;
 }
-.game-boxs{
+.gameover-cards{
     display: flex;
     justify-content: space-between;
+}
+.gameover-cards img{
+    width: 510px;
+}
+#game{
+    padding: 150px 0px 70px;
+    background-color: #141820;
 }
 .game-cards{
     padding-top: 225px;
     display: flex;
+    height: 196px;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-end
 }
-.game-text{
-    margin-bottom: 10px;
+.game-card-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.game-imgtext{
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.game-imgtext img{
+    max-width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+.game-imgtext p{
+    width: 203px;
     color: #57B8FF;
     font-family: Orbitron;
     font-size: 16px;
@@ -381,8 +559,9 @@ h3{
     line-height: 16px;
     text-transform: uppercase;
 }
-h3{
-    margin-bottom: 10px;
+.game-title{
+    margin-bottom: 60px;
+    width: 541px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 64px;
@@ -391,13 +570,36 @@ h3{
     line-height: 74px;
     text-transform: capitalize;
 }
-.game-box-1 img{
-    width: 400px;
-    height: 400px;
+.game-btn{
+    display: inline-block;
+    margin-bottom: 60px;
+    width: 250px;
+    height: 50px;
     flex-shrink: 0;
+    background: #57B8FF;
+    max-width: 150px;
+    color: #FFF;
+    font-family: Orbitron;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: capitalize;
 }
-.game-text-1{
-    margin-bottom: 10px;
+.game-boxs{
+    display: flex;
+    align-items: center;
+    padding-top: 64px;
+    gap: 24px;
+}
+.game-left-box-img {
+    margin-bottom: 50px;
+
+}
+.game-left-box-span{
+    display: block;
+    margin-bottom: 24px;
+    width: 130px;
     color: #57B8FF;
     font-family: Orbitron;
     font-size: 18px;
@@ -405,8 +607,8 @@ h3{
     font-weight: 400;
     line-height: 18px;
 }
-.game-text-3{
-    max-width: 500px;
+.game-left-box-text{
+    width: 607px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 36px;
@@ -415,27 +617,28 @@ h3{
     line-height: 46px;
     text-transform: capitalize;
 }
-.game-card{
-    width: 312px;
-    height: 321px;
-    flex-shrink: 0;
+.game-right-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
 }
-.game-card img{
+.right-card-img{
+  margin-bottom: 30px;
+}
+.right-card-span{
+    display: block;
     margin-bottom: 20px;
-    max-width: 250px;
-    height: 150px;
-}
-.game-card-text{
-    margin-bottom: 10px;
+    width: 116px;
     color: #57B8FF;
     font-family: Orbitron;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 16px;
 }
-.game-card-text-1{
-    max-width: 250px;
+.right-card-text{
+    max-width: 281px;
     color: #FFF;
     font-family: Orbitron;
     font-size: 23px;
@@ -443,6 +646,201 @@ h3{
     font-weight: 400;
     line-height: 34px;
     text-transform: capitalize;
+}
+footer {
+    padding: 126px 0px 100px;
+    background: url(../images/footer.svg)no-repeat;
+    background-size: cover;
+}
+
+.footer-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-box img {
+    margin-bottom: 30px;
+    position: absolute;
+    top: 150px;
+    left: 700px;
+}
+
+.footer-heading {
+    color: #141820;
+}
+
+.footer-text-1 {
+    width: 718px;
+    color: #555;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footer-text-2 {
+    margin-bottom: 50px;
+    width: 740px;
+    color: #555;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footer-img {
+    display: flex;
+    margin-bottom: 30px;
+    max-width: 430px;
+    height: 11.926px;
+    stroke-width: 4px;
+    stroke: #57B8FF;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border-radius: 5px 0px 0px 5px;
+    max-width: 445px;
+    height: 60px;
+    flex-shrink: 0;
+    border: 1px solid #CCC;
+    background: #FFF;
+    outline: none;
+}
+
+form button {
+    border-radius: 0px 5px 5px 0px;
+    max-width: 200px;
+    height: 60px;
+    flex-shrink: 0;
+    background: #57B8FF;
+    width: 206px;
+    color: #FFF;
+    text-align: center;
+    font-family: Orbitron;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+input[placeholder] {
+    padding-left: 13px;
+    width: 406px;
+    color: #555;
+    font-family: Orbitron;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+footer {
+    padding: 126px 0px 100px;
+    background: url(../images/footer.svg) no-repeat;
+    background-size: cover;
+}
+@media(max-width:1200px){
+    .home-boxs{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap
+     
+    }
+    .home-left-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+    .home-left-text{
+        color: white
+    }
+    .our-box-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+    .team-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .shop-boxs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 120px
+
+    }
+    .shop-box-1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .gameover-cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+
+    }
+    .game-cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .game-boxs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+    .game-right-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+}
+@media(max-width:950px){
+    .nav-list{
+        display: none;  
+    }
+    .nav-right {
+         display: none
+     }
+     .menu-link{
+        display: block
+        
+     }
+     .menu-link img{
+        background-color: transparent
+     }
+
 }
 
 
